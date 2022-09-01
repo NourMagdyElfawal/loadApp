@@ -26,13 +26,13 @@ class LoadingButton @JvmOverloads constructor(
     private var progress = 0
 
 
-    private val valueAnimator = ValueAnimator.ofInt(0, 360).setDuration(3000)
+    private val valueAnimator = ValueAnimator.ofInt(0, 360)
 
     var buttonState: ButtonState by Delegates.observable<ButtonState>(ButtonState.Completed) { p, old, new ->
 
         when (new) {
             ButtonState.Clicked -> {
-                valueAnimator.start()
+                valueAnimator.setDuration(2000).start()
                 textString = resources.getString(R.string.button_loading)
 
             }
