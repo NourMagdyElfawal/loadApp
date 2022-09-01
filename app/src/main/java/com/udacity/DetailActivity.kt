@@ -39,12 +39,9 @@ class DetailActivity : AppCompatActivity() {
         scaler()
 //        rotater()
 //        fader()
-        buttonOk.setOnClickListener {
-            finish()
-        }
-
-
-
+//        buttonOk.setOnClickListener {
+//            finish()
+//        }
     }
 
     private fun rotater() {
@@ -70,6 +67,10 @@ class DetailActivity : AppCompatActivity() {
         animator.repeatCount = 3
         animator.repeatMode = ObjectAnimator.REVERSE
         animator.start()
+    }
+
+    fun onButtonOkClicked(view: View) {
+        finish()
     }
 
 }
